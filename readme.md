@@ -1,3 +1,6 @@
+![CLI Genie logo](https://ibb.co/CmQKyZ1)
+
+
 # Cli Genie
 
 Cli Genie is an NPM package that allows developers to easily create interactive command-line interfaces (CLIs) with a genie-style interface. It simplifies the process of building complex command-line tools by providing a guided user experience.
