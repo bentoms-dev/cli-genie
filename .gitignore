@@ -1,0 +1,39 @@
+# Node.js
+node_modules/
+
+# Output of npm (installed packages)
+package-lock.json
+
+# Dependency directories
+/node_modules
+
+# Environment
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+
+# Build files
+/dist
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# IDE specific files
+.vscode/
+.idea/
+
+# NPM configuration
+.npmrc
+
+# Compiled binary addons
+/build/Release
