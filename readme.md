@@ -1,5 +1,4 @@
-![CLI Genie logo](https://ibb.co/CmQKyZ1)
-
+![CLI Genie logo](https://i.ibb.co/pbdjT80/cli-genie.png)
 
 # Cli Genie
 
