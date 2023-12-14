@@ -51,5 +51,5 @@ The CliGenie package includes error handling to gracefully handle unexpected sit
 
 # License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/bentoms-dev/cli-genie/blob/main/LICENSE) file for details.
 

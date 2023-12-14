@@ -1,15 +1,23 @@
 {
   "name": "cli-genie",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
   "main": "example.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "inquirer": "^9.2.12"
-  }
+  },
+  "description": "CLI Genie allows developers to easily create interactive command-line interfaces with a genie-style interface. It simplifies the process of building complex command-line tools by providing a guided user experience.",
+  "keywords": ["cli", "wizard", "helper", "genie"],
+  "author": "Ben Toms",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bentoms-dev/cli-genie/"
+  },
+  "bugs": {
+    "url": "https://github.com/bentoms-dev/cli-genie/issues"
+  },
+  "homepage": "https://github.com/bentoms-dev/cli-genie/blob/main/readme.md"
 }
