@@ -1,0 +1,33 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write # npm provenance / trusted publishing
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          registry-url: https://registry.npmjs.org
+      - run: npm ci
+      - run: npm run check
+      - name: Create release PR or publish to npm
+        uses: changesets/action@v2
+        with:
+          publish-script: npm run release
+          version-script: npx changeset version
+          commit-message: 'chore: version packages'
+          pr-title: 'chore: version packages'
+        # Publishing authenticates with npm trusted publishing (OIDC via `id-token: write`), so no NPM_TOKEN is needed.

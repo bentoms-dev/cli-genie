@@ -1,23 +1,86 @@
 {
   "name": "cli-genie",
-  "version": "1.0.1",
-  "main": "example.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "inquirer": "^9.2.12"
-  },
+  "version": "2.0.0",
   "description": "CLI Genie allows developers to easily create interactive command-line interfaces with a genie-style interface. It simplifies the process of building complex command-line tools by providing a guided user experience.",
-  "keywords": ["cli", "wizard", "helper", "genie"],
+  "keywords": [
+    "cli",
+    "wizard",
+    "prompt",
+    "interactive",
+    "inquirer",
+    "genie",
+    "questionnaire",
+    "typescript"
+  ],
   "author": "Ben Toms",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bentoms-dev/cli-genie/"
+    "url": "git+https://github.com/bentoms-dev/cli-genie.git"
   },
   "bugs": {
     "url": "https://github.com/bentoms-dev/cli-genie/issues"
   },
-  "homepage": "https://github.com/bentoms-dev/cli-genie/blob/main/readme.md"
+  "homepage": "https://www.ben-toms.com/npm-packages",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "cli-genie": "./dist/bin.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": "^22.13.0 || >=24"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run typecheck && npm run lint && npm run format:check && npm test && npm run build",
+    "changeset": "changeset",
+    "release": "npm run build && changeset publish",
+    "prepublishOnly": "npm run check"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^8.7.5"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^3.0.3",
+    "@eslint/js": "^10.0.1",
+    "@inquirer/testing": "^3.3.16",
+    "@types/node": "^22.20.5",
+    "eslint": "^10.14.0",
+    "globals": "^17.14.0",
+    "prettier": "^3.9.10",
+    "tsup": "^9.0.0",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.72.1",
+    "vitest": "^5.1.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
 }

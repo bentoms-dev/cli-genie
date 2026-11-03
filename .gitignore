@@ -1,9 +1,6 @@
 # Node.js
 node_modules/
 
-# Output of npm (installed packages)
-package-lock.json
-
 # Dependency directories
 /node_modules
 
@@ -20,6 +17,8 @@ npm-debug.log*
 
 # Build files
 /dist
+/coverage
+*.tgz
 
 # Mac OS
 .DS_Store

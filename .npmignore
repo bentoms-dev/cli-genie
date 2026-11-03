@@ -1,5 +1,0 @@
-# Files and directories to be excluded from the npm package
-example.js
-/src/utils
-/test
-/docs
