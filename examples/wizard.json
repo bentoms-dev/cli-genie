@@ -1,0 +1,34 @@
+{
+  "title": "🧞 Pizza order",
+  "summary": true,
+  "steps": [
+    {
+      "type": "text",
+      "name": "email",
+      "message": "Email address",
+      "pattern": "^[^@\\s]+@[^@\\s]+$",
+      "patternMessage": "Please enter a valid email"
+    },
+    {
+      "type": "select",
+      "name": "size",
+      "message": "Size",
+      "choices": ["small", "medium", "large"],
+      "default": "medium"
+    },
+    {
+      "type": "checkbox",
+      "name": "toppings",
+      "message": "Toppings",
+      "choices": ["cheese", "ham", "mushrooms", "olives", "pineapple"]
+    },
+    { "type": "confirm", "name": "delivery", "message": "Delivery?", "default": true },
+    {
+      "type": "text",
+      "name": "address",
+      "message": "Delivery address",
+      "required": true,
+      "when": { "delivery": true }
+    }
+  ]
+}

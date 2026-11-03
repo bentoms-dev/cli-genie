@@ -1,0 +1,32 @@
+name: Bug report
+description: Something isn't working as expected
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Include what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: The smallest set of steps / code that shows the problem.
+      render: ts
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: cli-genie version
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Node.js version, OS and terminal
+      placeholder: Node 24.1, macOS 15, iTerm2
+    validations:
+      required: true
